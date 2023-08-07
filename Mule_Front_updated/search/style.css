@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.modal-content {
+    border-radius: 20px;
+    /* Increase the border radius for a more rounded appearance */
+    border: none;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    /* Soften the box shadow for a subtler effect */
+    background-color: #f8f9fa;
+    /* Use a softer color for the background */
+    padding: 20px;
+    /* Add some padding inside the modal */
+}
+
+.btn-search {
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.lupa {
+    color: #060d43;
+}
+
+/* Navbar */
+.search-input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    /* adjust this to position the icon left or right */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.search-input {
+    width: 543px;
+    height: 63px;
+    border: none;
+    border-radius: 31px;
+    padding: 20px;
+    padding-left: 50px;
+    /* Adjust this as needed */
+    box-sizing: border-box;
+    background-color: #F2F4F8;
+    outline: none;
+    color: #09244B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+input.search-input.error {
+    border-bottom: 2px solid red !important;
+}
+
+
+.navbar {
+    background: #fff;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.navbar-logo {
+    width: 120px;
+    height: auto;
+}
+
+.search-form {
+    flex-grow: 1;
+    margin-left: 2rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-icon {
+    color: #212529;
+}
+
+
+.btn-search,
+.btn-list {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-search {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-list {
+    background-color: #28a745;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar */
+
+#homeLink {
+    cursor: pointer;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #060d43;
+    padding: 50px 0;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2rem;
+}
+
+.footer-title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f0f0f0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+}
+
+.lupa {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+}
+
+.contact-input {
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 10px 15px 10px 40px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-input:focus {
+    border-color: #fff;
+}
+
+.contact-button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: #fff;
+    color: #060d43;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #f8f9fa;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-contact {
+        width: 100%;
+    }
+
+    .lupa {
+        position: static;
+        margin-right: 10px;
+        transform: none;
+    }
+
+    .contact-input {
+        padding-left: 15px;
+    }
+}
+
+/* Footer */
+
+
+/* Productos */
+.custom-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;  /* para un espacio entre tarjetas, si hay más de una */
+}
+
+.product-image {
+    width: 130px;  /* Hice la imagen más pequeña */
+    height: auto;
+    margin-right: 30px;
+}
+
+.product-details {
+    flex: 1;  /* Asegura que tome todo el espacio disponible, empujando a product-image a la derecha */
+    margin-right: 5px;  /* Espacio adicional entre el título y la imagen */
+}
+
+.buttons-container svg {
+    width: 195px;  /* disminuir el ancho original de 213px */
+    height: 50px;  /* disminuir el alto original de 52px */
+    margin-right: 10px;
+}
+
+.buttons-container svg:last-child {
+    margin-right: 0;
+}
+
+
+.btn-svg {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-svg:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    /* Hace que las esquinas de la tarjeta sean más redondeadas. */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Agrega una sombra sutil para un efecto de elevación. */
+    border: none;
+    /* Elimina el borde por defecto de las tarjetas. */
+    transition: all 0.3s ease;
+    /* Hace que las transiciones sean suaves. */
+}
+
+.card:hover {
+    transform: scale(1.02);
+    /* Al pasar el cursor sobre la tarjeta, se escala ligeramente. */
+}
+
+.card-img {
+    object-fit: cover;
+    /* Asegura que la imagen cubra toda el área disponible. */
+    height: 100%;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.5em;
+    /* Aumenta el tamaño de la fuente del título. */
+    color: #333;
+    /* Cambia el color del texto a un gris oscuro. */
+}
+
+.card-text {
+    color: #777;
+    /* Cambia el color del texto a un gris medio. */
+}
+
+.product-description {
+    padding: 20px 0px 20px 10px;
+    /* Agrega un padding mínimo a la izquierda para acercar el texto a la imagen. */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    /* Agrega padding alrededor de los botones. */
+}
+
+.btn {
+    border-radius: 50px;
+    /* Hace que los botones sean más redondeados. */
+    font-weight: 500;
+    /* Hace que el texto de los botones sea un poco más grueso. */
+    transition: all 0.2s ease;
+    /* Hace que las transiciones sean suaves. */
+}
+
+.btn-primary {
+    background-color: #060d43;
+    /* Cambia el color de fondo del botón a un azul brillante. */
+    border-color: #060d43;
+    /* Cambia el color del borde del botón a un azul brillante. */
+}
+
+.btn-primary:hover {
+    background-color: #060d43;
+    /* Cambia el color de fondo del botón al pasar el cursor sobre él. */
+    border-color: #060d43;
+    /* Cambia el color del borde del botón al pasar el cursor sobre él. */
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    /* Cambia el color de fondo del botón a un gris medio. */
+    border-color: #95a5a6;
+    /* Cambia el color del borde del botón a un gris medio. */
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+    /* Cambia el color de fondo del botón al pasar el cursor sobre él. */
+    border-color: #7f8c8d;
+    /* Cambia el color del borde del botón al pasar el cursor sobre él. */
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .product-description {
+        padding: 10px;
+    }
+
+    .buttons-container {
+        padding: 10px;
+    }
+}
+
+/* Proveedores */
+.modal-content {
+    border-radius: 20px;
+    /* Increase the border radius for a more rounded appearance */
+    border: none;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    /* Soften the box shadow for a subtler effect */
+    background-color: #f8f9fa;
+    /* Use a softer color for the background */
+    padding: 20px;
+    /* Add some padding inside the modal */
+}
+
+
+.modal-header {
+    background-color: #060d43;
+    color: #ffffff;
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+.modal-body {
+    background-color: #f2f2f2;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card .card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .btn-primary {
+    background-color: #060d43;
+    border: none;
+    margin-top: 10px;
+}
+
+.card .btn-secondary {
+    background-color: #28a745;
+    border: none;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Modal detalles */
+.carousel-inner img {
+    height: 405px;
+    /* Ajusta esto según tus necesidades */
+    object-fit: contain;
+    /* Asegura que las imágenes se ajusten completamente al contenedor */
+    width: 100%;
+    /* Esto asegura que la imagen ocupe el ancho total del contenedor. */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0);
+    /* Transparent background */
+    width: 50px;
+    transition: background-color 0.3s ease;
+    /* Add a transition effect */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none !important;
+    /* Quita las flechas predeterminadas */
+}
+
+.carousel-control-prev-icon:after,
+.carousel-control-next-icon:after {
+    font-size: 35px;
+    /* Aumenta el tamaño de las flechas */
+    color: white;
+    /* Cambia el color de las flechas a blanco */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Slightly darker when hovered over */
+}
+
+.carousel-control-prev-icon:after {
+    content: '◀';
+    /* Use a different Unicode character for the arrow */
+    color: #060d43;
+    /* Use a lighter color for the arrow */
+    font-size: 2rem;
+    /* Increase the size of the arrow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Add a text shadow for a 3D effect */
+}
+
+.carousel-control-next-icon:after {
+    content: '▶';
+    /* Use a different Unicode character for the arrow */
+    color: #060d43;
+    /* Use a lighter color for the arrow */
+    font-size: 2rem;
+    /* Increase the size of the arrow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Add a text shadow for a 3D effect */
+}
+
+
+.carousel-indicators li {
+    background-color: black;
+    border-radius: 50%;
+    /* Make the indicators circular */
+}
+
+/* Modal detalles */
+
+/* Updated font style */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.btn.btn-secondary {
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn.btn-secondary:active {
+    transform: translateY(0px);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
