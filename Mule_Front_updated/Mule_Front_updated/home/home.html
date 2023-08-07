@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mule - Construction Metasearch</title>
+    <link rel="icon" href="m-solid.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <img src="Logo_Mule.png" alt="Logo de Mule" class="navbar-logo">
+            <form class="search-form">
+                <div class="input-group">
+                    <div class="search-input-wrapper">
+                        <div class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none">
+                                <path
+                                    d="M9.35995 0.568359C4.50503 0.568359 0.569336 4.50405 0.569336 9.35896C0.569336 14.2139 4.50503 18.1496 9.35995 18.1496C11.4147 18.1496 13.3049 17.4446 14.8016 16.2632L18.5789 20.0405C18.9828 20.4444 19.6376 20.4444 20.0415 20.0405C20.4454 19.6366 20.4454 18.9818 20.0415 18.5779L16.2642 14.8007C17.4456 13.3039 18.1506 11.4138 18.1506 9.35896C18.1506 4.50405 14.2149 0.568359 9.35995 0.568359Z"
+                                    fill="#09244B" />
+                            </svg>
+                        </div>
+                        <input id="search-input" class="search-input" type="search"
+                            placeholder="Busca tus productos...">
+                    </div>
+                    <button class="btn btn-search" type="submit">Buscar</button>
+                    <a href="../playlist/index.html" class="btn btn-list">
+                        Mi Lista
+                        <i class="fas fa-shopping-cart cart-icon"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+
+
+    <section class="materials-section d-flex flex-column justify-content-center align-items-center">
+        <div class="content-container row">
+            <div class="text-container col-md-6 d-flex flex-column justify-content-center align-items-center">
+                <h2 class="main-heading">Encontrá todos <span class="highlight">tus materiales</span> al <span
+                        class="highlight">mejor precio</span></h2>
+                <h5 class="sub-heading mb-4">Utiliza los filtros que más te gusten</h5>
+                <button class="btn-rounded" type="button">
+                    <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                    Crear nueva lista
+                </button>
+            </div>
+            <div class="img-container col-md-6 d-flex justify-content-center align-items-center">
+                <svg width="489" height="489" viewBox="0 0 489 489" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#a)">
+                        <rect width="489" height="489" rx="63.463" fill="#fff" fill-opacity=".51" />
+                        <g filter="url(#b)" fill="#09244B">
+                            <path
+                                d="M246.449 297.796h.003c14.61 0 28.347-5.69 38.677-16.02 8.635-8.635 14.019-19.583 15.574-31.668 1.506-11.699-.854-23.764-6.639-33.972a4.39 4.39 0 0 0-6.921-.94l-33.89 33.89a1.324 1.324 0 0 1-.943.383c-.208 0-.606-.049-.939-.383l-10.922-10.921a1.348 1.348 0 0 1 0-1.883l33.89-33.89a4.388 4.388 0 0 0-.94-6.92c-8.181-4.637-17.505-7.089-26.96-7.089-14.612 0-28.35 5.69-38.68 16.02-7.539 7.539-12.679 17.022-14.855 27.416a54.795 54.795 0 0 0 1.31 27.575l-81.76 81.759c-3.517 3.517-5.454 8.21-5.454 13.21 0 5.001 1.938 9.694 5.454 13.211l9.502 9.501c3.517 3.517 8.209 5.454 13.21 5.454 5.002 0 9.694-1.937 13.211-5.454l81.759-81.759a54.648 54.648 0 0 0 16.312 2.476l.001.004Z" />
+                            <path
+                                d="m379.719 224.848-23.962-4.456a105.112 105.112 0 0 0-1.804-9.119l20.423-13.28a4.368 4.368 0 0 0 1.655-5.334l-5.474-13.216a4.371 4.371 0 0 0-4.943-2.603l-23.84 5.054a105.44 105.44 0 0 0-5.166-7.72l13.794-20.098a4.369 4.369 0 0 0-.512-5.562l-10.115-10.116a4.37 4.37 0 0 0-5.563-.512l-20.1 13.798a104.814 104.814 0 0 0-7.72-5.167l5.053-23.84a4.373 4.373 0 0 0-2.602-4.944l-13.216-5.474a4.374 4.374 0 0 0-5.336 1.655l-13.28 20.424a105.112 105.112 0 0 0-9.119-1.804l-4.456-23.962a4.37 4.37 0 0 0-4.294-3.572h-14.307a4.37 4.37 0 0 0-4.297 3.572l-4.456 23.962c-3.063.466-6.114 1.07-9.119 1.804l-13.28-20.424a4.37 4.37 0 0 0-5.333-1.655l-13.216 5.474a4.373 4.373 0 0 0-2.603 4.944l5.054 23.84a105.773 105.773 0 0 0-7.72 5.167l-20.097-13.798a4.37 4.37 0 0 0-5.563.512l-10.115 10.116a4.369 4.369 0 0 0-.512 5.562l13.797 20.098a106.776 106.776 0 0 0-5.169 7.72l-23.84-5.054a4.375 4.375 0 0 0-4.943 2.603l-5.474 13.216a4.369 4.369 0 0 0 1.655 5.334l20.423 13.28a105.112 105.112 0 0 0-1.804 9.119l-23.962 4.456a4.371 4.371 0 0 0-3.572 4.295v14.306c0 2.106 1.5 3.911 3.572 4.295l23.962 4.456c.466 3.063 1.07 6.114 1.804 9.119l-20.423 13.28a4.37 4.37 0 0 0-1.655 5.334l5.474 13.216a4.371 4.371 0 0 0 4.943 2.603l14.145-3 28.558-28.558a75.818 75.818 0 0 1-5.288-27.901c0-42.02 34.187-76.208 76.207-76.208 42.019 0 76.206 34.187 76.206 76.208 0 42.022-34.186 76.209-76.206 76.209a75.844 75.844 0 0 1-24.952-4.197l-32.59 32.591-1.911 9.022a4.372 4.372 0 0 0 2.603 4.943l13.215 5.474a4.368 4.368 0 0 0 5.334-1.655l13.279-20.424c3.005.735 6.053 1.338 9.12 1.805l4.455 23.962a4.372 4.372 0 0 0 4.298 3.572h14.303a4.368 4.368 0 0 0 4.294-3.572l4.456-23.962c3.063-.467 6.114-1.07 9.119-1.805l13.28 20.424a4.367 4.367 0 0 0 5.333 1.655l13.216-5.474a4.37 4.37 0 0 0 2.603-4.943l-5.053-23.841a104.716 104.716 0 0 0 7.719-5.169l20.101 13.798a4.371 4.371 0 0 0 5.562-.512l10.116-10.116a4.372 4.372 0 0 0 .512-5.563l-13.798-20.097a105.654 105.654 0 0 0 5.166-7.72l23.84 5.053a4.373 4.373 0 0 0 4.943-2.603l5.474-13.216a4.373 4.373 0 0 0-1.655-5.337l-20.423-13.279a105.134 105.134 0 0 0 1.804-9.12l23.962-4.456a4.37 4.37 0 0 0 3.572-4.294v-14.304a4.362 4.362 0 0 0-3.566-4.294Z" />
+                        </g>
+                        <rect x="1.706" y="1.706" width="485.588" height="485.588" rx="61.757" stroke="#13C670"
+                            stroke-opacity=".13" stroke-width="3.412" />
+                    </g>
+                    <defs>
+                        <filter id="a" x="0" y="-23.531" width="489" height="512.531" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha" />
+                            <feOffset dy="-23.531" />
+                            <feGaussianBlur stdDeviation="23.531" />
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                            <feColorMatrix values="0 0 0 0 0.0980392 0 0 0 0 0.156863 0 0 0 0 0.4 0 0 0 0.2 0" />
+                            <feBlend in2="shape" result="effect1_innerShadow_16_73" />
+                        </filter>
+                        <filter id="b" x="102.451" y="105" width="285.383" height="286.627" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha" />
+                            <feOffset dy="4.549" />
+                            <feGaussianBlur stdDeviation="2.274" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_16_73" />
+                            <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha" />
+                            <feOffset dy="4.549" />
+                            <feGaussianBlur stdDeviation="2.274" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend in2="effect1_dropShadow_16_73" result="effect2_dropShadow_16_73" />
+                            <feBlend in="SourceGraphic" in2="effect2_dropShadow_16_73" result="shape" />
+                            <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha" />
+                            <feOffset dy="-9.348" />
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 0.26 0" />
+                            <feBlend in2="shape" result="effect3_innerShadow_16_73" />
+                        </filter>
+                    </defs>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+                </svg>
+            </div>
+        </div>
+    </section>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container choice-section">
+        <h2 class="text-center mb-4 title-text">Lo más elegidos</h2>
+        <div class="row">
+            <div class="col-sm-3 mb-3">
+                <div class="choice-card">
+                    <img src="Merlino.png" class="choice-img" alt="Merlino">
+                    <div class="card-content">
+                        <h5 class="card-title">Merlino</h5>
+                        <a href="https://www.merlinosrl.com.ar/" target="_blank" class="btn-rounded">Sitio web</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 mb-3">
+                <div class="choice-card">
+                    <img src="Ferrocons.jpg" class="choice-img" alt="Ferrocons">
+                    <div class="card-content">
+                        <h5 class="card-title">Ferrocons</h5>
+                        <a href="https://www.ferrocons.com.ar/" target="_blank" class="btn-rounded website-link">Sitio
+                            web</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 mb-3">
+                <div class="choice-card">
+                    <img src="SaniPlast.png" class="choice-img" alt="SaniPlast">
+                    <div class="card-content">
+                        <h5 class="card-title">SaniPlast</h5>
+                        <a href="http://www.SaniPlast.com.ar/" target="_blank" class="btn-rounded">Sitio web</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 mb-3">
+                <div class="choice-card">
+                    <img src="Easy.png" class="choice-img" alt="Easy">
+                    <div class="card-content">
+                        <h5 class="card-title">Easy</h5>
+                        <a href="https://www.easy.com.ar/" target="_blank" class="btn-rounded">Sitio web</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section class="how-it-works container mt-5 text-center">
+        <h2 class="how-it-works-title title-text">¿Cómo funciona?</h2>
+        <div class="how-it-works-grid mt-4">
+            <!-- Primer elemento -->
+            <div class="how-it-works-item">
+                <div class="how-it-works-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="182" height="182" viewBox="0 0 182 182" fill="none">
+                        <g filter="url(#filter0_b_7_86)">
+                            <circle cx="91" cy="91" r="91" fill="#00A3FF" fill-opacity="0.08" />
+                            <circle cx="91" cy="91" r="90.5" stroke="#1794FA" />
+                        </g>
+                        <path
+                            d="M88.2273 62C73.7424 62 62 73.7423 62 88.2273C62 102.712 73.7424 114.455 88.2273 114.455C94.3579 114.455 99.9972 112.351 104.463 108.827L115.733 120.096C116.938 121.301 118.891 121.301 120.096 120.096C121.301 118.891 121.301 116.938 120.096 115.733L108.827 104.463C112.351 99.9972 114.455 94.3579 114.455 88.2273C114.455 73.7423 102.712 62 88.2273 62Z"
+                            fill="#09244B" />
+                        <defs>
+                            <filter id="filter0_b_7_86" x="-169.12" y="-169.12" width="520.24" height="520.24"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="84.56" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_7_86" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_7_86"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <h4 class="how-it-works-step">1. BUSCÁ</h4>
+                <p class="how-it-works-desc">Carga tu lista de materiales.</p>
+            </div>
+            <!-- Segundo elemento -->
+            <div class="how-it-works-item">
+                <div class="how-it-works-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="182" height="182" viewBox="0 0 182 182" fill="none">
+                        <g filter="url(#filter0_b_7_87)">
+                            <circle cx="91" cy="91" r="91" fill="#00A3FF" fill-opacity="0.08" />
+                            <circle cx="91" cy="91" r="90.5" stroke="#1794FA" />
+                        </g>
+                        <path
+                            d="M115.825 78.7779L106.37 69.1913C104.804 67.6029 102.264 67.6029 100.697 69.1913C99.1309 70.7796 99.1309 73.3549 100.697 74.9433L103.304 77.5867H80.8029C78.5875 77.5867 76.7916 79.4076 76.7916 81.6539C76.7916 83.9002 78.5875 85.7212 80.8029 85.7212H103.304L100.697 88.3646C99.1309 89.953 99.1309 92.5282 100.697 94.1166C102.264 95.705 104.804 95.705 106.37 94.1166L115.825 84.5299C117.392 82.9416 117.392 80.3663 115.825 78.7779Z"
+                            fill="#09244B" />
+                        <path
+                            d="M67.1749 106.222C65.6084 104.634 65.6084 102.058 67.1749 100.47L76.6297 90.8834C78.1962 89.295 80.7361 89.295 82.3026 90.8834C83.8691 92.4718 83.8691 95.047 82.3026 96.6354L79.6955 99.2788H102.197C104.412 99.2788 106.208 101.1 106.208 103.346C106.208 105.592 104.412 107.413 102.197 107.413H79.6955L82.3026 110.057C83.8691 111.645 83.8691 114.22 82.3026 115.809C80.7361 117.397 78.1962 117.397 76.6297 115.809L67.1749 106.222Z"
+                            fill="#09244B" />
+                        <defs>
+                            <filter id="filter0_b_7_87" x="-169.12" y="-169.12" width="520.24" height="520.24"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="84.56" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_7_87" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_7_87"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <h4 class="how-it-works-step">2. COMPARÁ</h4>
+                <p class="how-it-works-desc">Los distintos proveedores y precios</p>
+            </div>
+            <!-- Tercer elemento -->
+            <div class="how-it-works-item">
+                <div class="how-it-works-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="182"
+                        height="182" viewBox="0 0 182 182" fill="none">
+                        <g filter="url(#filter0_b_7_93)">
+                            <circle cx="91" cy="91" r="91" fill="#00A3FF" fill-opacity="0.08" />
+                            <circle cx="91" cy="91" r="90.5" stroke="#1794FA" />
+                            <image x="61" y="61" width="60" height="60" xlink:href="Calculator.png" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_7_93" x="-169.12" y="-169.12" width="520.24" height="520.24"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="84.56" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_7_93" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_7_93"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <h4 class="how-it-works-step">3. CALCULÁ</h4>
+                <p class="how-it-works-desc">El presupuesto de tu proyecto.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <div class="custom-section">
+        <section class="category container mt-5">
+            <h2 class="category-title category-title-text" style="text-align: left;">Buscar materiales por categoría
+            </h2>
+            <div class="category-grid mt-4">
+                <div class="category-item">
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="79" height="63" viewBox="0 0 79 63" fill="none">
+                            <path
+                                d="M67.4885 23.6247V27.5619H58.3575C56.3723 22.4435 52.4026 18.5056 47.6388 16.9308L47.6394 7.87511H55.5794C57.9614 7.87511 59.5491 6.30036 59.5491 3.93789C59.5491 1.57541 57.9614 0.000659171 55.5794 0.000659171L27.789 0C25.4071 0 23.8194 1.96895 23.8194 3.9379C23.8194 6.30037 25.4071 7.87513 27.789 7.87513H35.7291V16.9315C30.5677 18.5062 26.5981 22.4435 25.0103 27.5626H15.8794C7.14581 27.5626 0 34.65 0 43.3122V63H15.8794V43.3122H26.9948C30.171 48.0371 35.7284 51.1873 41.6832 51.1873C47.6381 51.1873 53.1961 48.0371 56.3716 43.3122H67.0903V47.2494H79V23.6247L67.4885 23.6247Z"
+                                fill="#1794FA" />
+                        </svg>
+                    </div>
+                    <h5 class="category-name">Griferías y artefactos sanitarios</h5>
+                </div>
+                <div class="category-item">
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="98" height="101" viewBox="0 0 98 101"
+                            fill="none">
+                            <path
+                                d="M86.998 73.6498V101H0V73.6498C0 73.6498 3.2009 54.9022 13.4819 54.0212C23.7598 53.1401 25.9219 80.0481 43.5002 80.9283C61.0779 81.8094 58.3968 62.1807 69.5697 59.0938C80.7426 56.0049 87 73.6498 87 73.6498H86.998Z"
+                                fill="#333449" />
+                            <path
+                                d="M90.2932 3.68374C91.2131 1.86726 93.639 1.4797 95.0791 2.91915C96.5193 4.35874 96.1325 6.78514 94.3161 7.70562L93.5044 8.11695C92.4651 8.64364 91.2049 8.44204 90.3818 7.6174C89.5575 6.79415 89.356 5.53428 89.8823 4.495L90.2932 3.68374Z"
+                                fill="#333449" />
+                            <path d="M87.6864 8L88.8424 9.11897L90 10.2379L62.3143 37L60 34.7621L87.6864 8Z"
+                                fill="#333449" />
+                            <path
+                                d="M57.975 53.793C57.9282 53.8368 53.1645 58 46.7936 58C44.6251 58 42.4912 57.5166 40.4476 56.5638C36.0945 47.2221 42.922 39.3619 43.1812 39.0661L52.2441 30L57.2335 34.9911L60.4182 38.178L67 44.763L57.975 53.793Z"
+                                fill="#333449" />
+                        </svg>
+                    </div>
+                    <h5 class="category-name">Corralón</h5>
+                </div>
+                <div class="category-item">
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="98" height="98" viewBox="0 0 98 98" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M28.4246 47.7312L42.0735 34.0972C43.5757 32.5804 46.0251 32.5804 47.5273 34.0972C49.0441 35.5993 49.0441 38.0487 47.5273 39.5508L33.8784 53.1996L44.8004 64.1216L58.4493 50.4728C59.9514 48.956 62.4009 48.956 63.903 50.4728C65.4198 51.9749 65.4198 54.4243 63.903 55.9265L50.2689 69.5752L55.7226 75.0289C55.7226 75.0289 53.3603 77.3912 50.1958 80.5557C45.8651 84.8864 40.0029 87.3072 33.8925 87.3072C29.0369 87.3072 24.3408 85.7904 20.4626 83.0059L6.59492 96.8734C5.09277 98.3755 2.64337 98.3755 1.12661 96.8734C-0.375537 95.3566 -0.375537 92.9073 1.12661 91.4051L14.9942 77.5376C12.2088 73.6586 10.6929 68.9634 10.6929 64.1078C10.6929 57.9984 13.1138 52.1362 17.4445 47.8047C20.609 44.6402 22.9713 42.2779 22.9713 42.2779L28.4246 47.7312ZM29.358 67.5185H34.3161L24.3128 78.4111L27.6817 67.5762H22.7235L32.7269 56.6983L29.358 67.5185ZM77.5374 14.9941L91.4051 1.1266C92.9072 -0.375534 95.3566 -0.375534 96.8734 1.1266C98.3755 2.64338 98.3755 5.0927 96.8734 6.59486L83.0058 20.4624C85.7912 24.3414 87.3071 29.0366 87.3071 33.8922C87.3071 40.0016 84.8862 45.8638 80.5555 50.1953C77.391 53.3598 75.0287 55.7221 75.0287 55.7221L42.2772 22.9709C42.2772 22.9709 44.6395 20.6086 47.804 17.4441C52.1347 13.1134 57.9969 10.6926 64.1073 10.6926C68.9629 10.6926 73.659 12.2094 77.5372 14.9939L77.5374 14.9941Z"
+                                fill="#13C670" />
+                        </svg>
+                    </div>
+                    <h5 class="category-name">Electricidad</h5>
+                </div>
+                <div class="category-item">
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="87" height="93" viewBox="0 0 87 93" fill="none">
+                            <path
+                                d="M86.9994 11.8735V29.6817C86.9994 30.5523 86.4457 31.3239 85.6152 31.5614L39.5451 45.5907V65.2985H43.4998C44.5283 65.2985 45.3982 66.0901 45.4772 67.0992L47.4151 90.4671C47.4747 90.6451 47.494 90.8231 47.494 91.0211C47.494 92.1092 46.6241 93 45.5166 93H45.4772H29.6593C29.1056 93 28.5913 92.7624 28.2155 92.3469C27.8397 91.9514 27.6425 91.3973 27.7013 90.8432L29.6787 67.0987C29.7576 66.0896 30.6082 65.298 31.6359 65.298H35.5906V44.1258C35.5906 43.2552 36.1643 42.4837 36.9941 42.226L83.0459 28.2167V13.8513H75.1366V21.7663C75.1366 22.8544 74.2666 23.7452 73.1591 23.7452L1.97742 23.7445C0.890135 23.7445 0 22.8538 0 21.7656V1.97886C0 0.870698 0.890061 0 1.97742 0H73.1591C74.2665 0 75.1366 0.870606 75.1366 1.97886V9.89393H85.0233C86.13 9.89393 87 10.7645 87 11.8728L86.9994 11.8735Z"
+                                fill="#1794FA" />
+                        </svg>
+                    </div>
+                    <h5 class="category-name">Pinturas</h5>
+                </div>
+                <div class="category-item">
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="99" height="100" viewBox="0 0 99 100"
+                            fill="none">
+                            <path
+                                d="M20.7588 16.9665C15.256 16.9604 9.97556 19.1416 6.0814 23.0306C2.18813 26.9203 4.14153e-06 32.1974 4.14153e-06 37.701V78.2593C-0.0034704 83.7603 2.17942 89.0374 6.06829 92.9289C9.95711 96.8195 15.2324 99.0058 20.7334 99.0058H26.151C31.6496 99.0058 36.9229 96.8212 40.812 92.9331C44.6999 89.0443 46.8847 83.7707 46.8847 78.2722V75.5699H35.1669V77.8988V77.8979C35.1669 80.5404 34.1175 83.0741 32.2491 84.9427C30.3807 86.8111 27.8468 87.8604 25.2044 87.8604H21.6925C19.051 87.8604 16.5164 86.8111 14.6487 84.9427C12.7803 83.0742 11.731 80.5404 11.731 77.8979V38.0491C11.731 35.4075 12.7803 32.8729 14.6487 31.0053C16.5163 29.1368 19.051 28.0866 21.6925 28.0866H30.6091V16.9663L20.7588 16.9665Z"
+                                fill="#13C670" />
+                            <path d="M38.1055 7.7146H43.9705V13.8914H38.1055V7.7146Z" fill="#13C670" />
+                            <path d="M38.1055 31.7739H43.9705V48.6975H38.1055V31.7739Z" fill="#13C670" />
+                            <path
+                                d="M33.3743 15.1252H48.7041C49.5362 15.1252 50.2111 15.9574 50.2111 16.6323V29.0104C50.2111 29.8425 49.5362 30.5175 48.7041 30.5175H33.3743C32.5421 30.5175 31.8672 29.6853 31.8672 29.0104V16.6323C31.8672 15.8002 32.5421 15.1252 33.3743 15.1252Z"
+                                fill="#13C670" />
+                            <path
+                                d="M48.9149 6.46891C50.0216 6.40029 51.0161 5.76967 51.5511 4.79853C52.0853 3.82653 52.0853 2.64865 51.5511 1.67667C51.0161 0.705527 50.0215 0.0749043 48.9149 0.00628061H33.1744C32.2823 -0.0493121 31.4076 0.26601 30.7561 0.878398C30.1055 1.48992 29.7363 2.34378 29.7363 3.23753C29.7363 4.13128 30.1055 4.98523 30.7561 5.59666C31.4076 6.20905 32.2823 6.52437 33.1744 6.46878L48.9149 6.46891Z"
+                                fill="#13C670" />
+                            <path d="M33.2363 49.9285H48.8145V54.0005H33.2363V49.9285Z" fill="#13C670" />
+                            <path d="M25.5283 65.3833H98.9997V74.2746H25.5283V65.3833Z" fill="#13C670" />
+                            <path d="M25.5283 55.2454H98.9997V64.1366H25.5283V55.2454Z" fill="#13C670" />
+                        </svg>
+                    </div>
+                    <h5 class="category-name">Aceros y hierros</h5>
+                </div>
+                <div class="category-item">
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="139" height="110" viewBox="0 0 139 110"
+                            fill="none">
+                            <path
+                                d="M9.72878 106.505H67.8581V108.365C67.8581 108.798 67.6846 109.214 67.3772 109.521C67.0698 109.827 66.6526 110 66.2179 110H11.3628C10.4571 110 9.72375 109.268 9.72375 108.365L9.72878 106.505ZM51.5123 89.4849H69.5379L74.2609 45.8198H3.32705L4.9299 60.6438L22.9378 60.6427C23.7206 60.6427 24.3551 61.2753 24.3551 62.0556C24.3551 62.8348 23.7206 63.4674 22.9378 63.4674H5.23175L9.58154 103.672H68.0031L69.2327 92.3057H51.5123C50.7295 92.3057 50.095 91.6731 50.095 90.8939C50.095 90.1135 50.7295 89.481 51.5123 89.481L51.5123 89.4849ZM128.028 99.2002C127.636 99.1739 127.271 98.9868 127.023 98.6836C126.774 98.3793 126.663 97.9864 126.716 97.5979C127.282 93.5573 125.712 89.5113 122.566 86.902C119.418 84.2929 115.142 83.4917 111.259 84.7832C110.881 84.908 110.468 84.8675 110.12 84.6737C109.773 84.4789 109.524 84.1473 109.434 83.7599C108.467 79.6175 105.691 76.124 101.867 74.2385C98.0424 72.3539 93.5717 72.2751 89.6831 74.0251C85.7946 75.7751 82.8964 79.1688 81.7851 83.2753C81.5996 83.9692 80.9189 84.4135 80.2064 84.3062C77.6649 83.9232 75.0674 84.3763 72.8081 85.5955L70.6915 105.167V108.365C70.6915 108.925 70.585 109.48 70.3764 110H139C138.762 107.192 137.525 104.561 135.513 102.581C133.502 100.601 130.846 99.4016 128.027 99.2004L128.028 99.2002ZM114.42 50.9262L107.069 68.6122C106.811 69.2338 107.107 69.9463 107.731 70.2035C108.354 70.4607 109.068 70.1663 109.327 69.5446L116.675 51.8598V51.8587C116.276 51.77 115.885 51.6464 115.506 51.491C115.128 51.3345 114.765 51.1462 114.42 50.9262ZM111.807 81.7089C115.899 80.794 120.187 81.675 123.584 84.1276C125.73 81.3346 127.92 78.3555 130.105 75.2528C131.663 73.0399 132.127 70.2425 131.369 67.6475C130.612 65.0515 128.713 62.9403 126.207 61.9062L117.123 58.1468L111.942 70.6157H111.943C111.389 71.9498 110.163 72.8877 108.728 73.0759C107.292 73.2641 105.864 72.6743 104.983 71.5295C104.101 70.3847 103.9 68.8569 104.454 67.5239L109.635 55.0539L100.549 51.2945C98.0446 50.2592 95.2044 50.4146 92.8276 51.7159C90.4508 53.0171 88.7962 55.3231 88.3286 57.9859C87.4206 63.157 86.6972 68.094 86.1647 72.7225C90.6177 69.8002 96.1835 69.1175 101.214 70.8762C106.244 72.636 110.163 76.6363 111.807 81.6923L111.807 81.7089ZM116.589 48.8837C117.705 49.2701 118.926 49.2241 120.009 48.7568C121.094 48.2895 121.962 47.4336 122.444 46.3589C126.097 39.3677 135.691 20.9267 136.399 19.2291V19.228C137.344 16.9527 137 14.3479 135.496 12.3932C133.992 10.4396 131.557 9.43286 129.108 9.7545C126.658 10.0762 124.566 11.6752 123.621 13.9507C122.911 15.6591 116.603 35.5 114.233 42.9991C113.798 44.0946 113.799 45.3138 114.238 46.4082C114.676 47.5016 115.517 48.387 116.59 48.8827L116.589 48.8837ZM77.5911 41.2577C77.59 40.2946 76.8061 39.5132 75.84 39.5121H1.74998C0.783873 39.5121 0 40.2935 0 41.2577C0 42.2219 0.783873 43.0033 1.74998 43.0033H75.84C76.8061 43.0022 77.59 42.2219 77.5911 41.2577ZM4.00132 36.6819C4.34605 29.1884 7.11028 22.0056 11.8839 16.2062C16.6572 10.4069 23.1829 6.30153 30.4879 4.50141V4.99171C30.4879 5.61774 30.9929 6.12774 31.6209 6.13539H45.9676C46.5955 6.12663 47.0994 5.61771 47.0994 4.99171V4.50141C54.4044 6.30175 60.9301 10.4069 65.7034 16.2062C70.4779 22.0056 73.2423 29.1873 73.5871 36.6819H75.8553C75.5051 28.5874 72.5035 20.8302 67.3097 14.5986C62.1168 8.36697 55.0172 4.00354 47.0995 2.17681V1.14367V1.14476C47.0995 0.518742 46.5956 0.0098341 45.9676 0H31.6277C30.9997 0.00875543 30.4947 0.51877 30.4947 1.14476V2.1779V2.17681C22.5737 4.0034 15.4707 8.36809 10.2758 14.6039C5.08091 20.8389 2.08043 28.5994 1.73446 36.6982H4.00151L4.00132 36.6819Z"
+                                fill="#1794FA" />
+                        </svg>
+                    </div>
+                    <h5 class="category-name">Aridos</h5>
+                </div>
+                <div class="category-item">
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="151" height="79" viewBox="0 0 151 79"
+                            fill="none">
+                            <path
+                                d="M26.5831 16.0027H42.2686C43.2191 16.0027 44.1695 15.3695 44.3287 14.2599L46.7048 2.53525C47.0219 1.26761 45.9123 0 44.6447 0H31.3363C30.5439 0 29.7515 0.475226 29.4354 1.26764L24.5241 13.1504C24.0489 14.4181 24.9994 16.0027 26.5831 16.0027Z"
+                                fill="#333449" />
+                            <path
+                                d="M40.05 22.8157H22.1463C21.3539 22.8157 20.5615 23.2909 20.2454 24.0833L0.12362 75.1001C-0.351606 76.5258 0.598848 77.9514 2.02453 77.9514H30.0682C31.0186 77.9514 31.9691 77.3181 32.1282 76.2085L42.11 25.3502C42.2681 24.0837 41.3176 22.816 40.05 22.816V22.8157Z"
+                                fill="#333449" />
+                            <path
+                                d="M69.6776 53.3938H45.2788C44.3284 53.3938 43.3779 54.0271 43.2188 55.1367L39.2579 75.4166C38.9407 76.6843 40.0503 77.9519 41.3179 77.9519H69.6782C70.7878 77.9519 71.7382 77.0014 71.7382 75.8918V55.6119C71.7382 54.3443 70.7877 53.3938 69.6782 53.3938L69.6776 53.3938Z"
+                                fill="#333449" />
+                            <path
+                                d="M69.6776 0.000488281H55.8939C54.9434 0.000488281 53.9929 0.633757 53.8338 1.74335L45.5948 44.0461C45.2776 45.3137 46.3872 46.5813 47.6548 46.5813H69.8355C70.9451 46.5813 71.8955 45.6309 71.8955 44.5213V2.21858C71.7375 0.952042 70.7872 0.000488281 69.6776 0.000488281Z"
+                                fill="#333449" />
+                            <path
+                                d="M80.768 16.0027H96.9289C98.1965 16.0027 99.305 14.7351 98.9889 13.4675L96.6128 1.74287C96.4547 0.792413 95.5032 0 94.5528 0H80.769C79.6594 0 78.709 0.950454 78.709 2.06002V13.7847C78.7079 15.0523 79.6584 16.0027 80.768 16.0027Z"
+                                fill="#333449" />
+                            <path
+                                d="M99.1469 22.8155H80.769C79.6594 22.8155 78.709 23.7659 78.709 24.8755V75.7338C78.709 76.8434 79.6594 77.7938 80.769 77.7938H109.129C110.397 77.7938 111.505 76.5262 111.189 75.2586L101.207 24.4003C101.049 23.6078 100.099 22.8154 99.1474 22.8154L99.1469 22.8155Z"
+                                fill="#333449" />
+                            <path
+                                d="M137.964 43.7293L121.328 1.42657C121.011 0.634162 120.218 0.158936 119.427 0.158936H105.959C104.692 0.158936 103.583 1.42658 103.899 2.69419L112.296 44.9969C112.454 45.9474 113.406 46.7398 114.356 46.7398H136.062C137.488 46.5806 138.439 44.997 137.964 43.7293Z"
+                                fill="#333449" />
+                            <path
+                                d="M150.322 75.0998L142.4 54.8199C142.083 54.0275 141.29 53.5522 140.499 53.5522H116.574C115.307 53.5522 114.198 54.8199 114.514 56.0875L118.475 76.3675C118.633 77.3179 119.585 78.1103 120.535 78.1103H148.42C149.847 77.9523 150.797 76.3676 150.322 75.0998Z"
+                                fill="#333449" />
+                        </svg>
+                    </div>
+                    <h5 class="category-name">Pisos y revestimientos</h5>
+                </div>
+                <div class="category-item">
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="130" height="88" viewBox="0 0 130 88"
+                            fill="none">
+                            <path
+                                d="M35.6053 38C35.6343 38 35.6633 37.9861 35.6923 37.9861H113.974C114.383 37.1215 114.782 36.243 115.114 35.2686H78.9303C77.4922 35.2686 76.3289 34.1129 76.3289 32.6843C76.3289 31.2557 77.4922 30.1 78.9303 30.1H116.394C116.696 28.4241 116.894 26.6851 116.995 24.9037H92.9315C91.4934 24.9037 90.33 23.748 90.33 22.3194C90.33 20.8908 91.4934 19.7351 92.9315 19.7351H117C116.346 8.00989 111.438 0 106.946 0H32C35.8367 4.95309 38.2932 13.0249 38.2932 22.3192C38.2932 28.1989 37.2983 33.5764 35.6059 37.9997L35.6053 38Z"
+                                fill="#13C670" />
+                            <path
+                                d="M51.356 65.5029C51.356 74.9004 48.8573 83.0127 45 88H119.958C122.947 88 126.142 84.4281 128.135 78.5497H89.0528C87.6158 78.5497 86.4533 77.3848 86.4533 75.9448C86.4533 74.5048 87.6158 73.3399 89.0528 73.3399H129.409C129.702 71.6978 129.894 69.941 129.996 68.1022H103.039C101.602 68.1022 100.44 66.9373 100.44 65.4973C100.44 64.0573 101.602 62.8924 103.039 62.8924L130 62.8935C129.347 51.0748 124.442 43.0011 119.959 43.0011L45.001 43C48.8637 47.9926 51.357 56.1051 51.357 65.5026L51.356 65.5029Z"
+                                fill="#13C670" />
+                            <path
+                                d="M18 88H27C25.1956 86.0897 23.6167 83.7442 22.3924 81C21.18 83.6772 19.759 86.1225 18 88Z"
+                                fill="#13C670" />
+                            <path
+                                d="M23.0026 44C27.7294 44 33 34.9648 33 21.998C33 9.03117 27.7294 0 23.0026 0C18.2706 0 13 9.0352 13 22.002C13 34.9688 18.2706 44 23.0026 44Z"
+                                fill="#13C670" />
+                            <path
+                                d="M35.4976 43C31.0071 43 26 52.2397 26 65.5C26 78.7603 31.0071 88 35.4976 88C39.9929 88 45 78.7603 45 65.5C45 52.2397 39.9929 43 35.4976 43Z"
+                                fill="#13C670" />
+                            <path
+                                d="M10.4973 88C15.4659 88 21 78.7603 21 65.5C21 52.2397 15.4659 43 10.4973 43C5.53413 43 0 52.2397 0 65.5C0 78.7603 5.53413 88 10.4973 88Z"
+                                fill="#13C670" />
+                        </svg>
+                    </div>
+                    <h5 class="category-name">Maderas</h5>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--Beneficios-->
+    <h2 class="benefits-title mb-4">Beneficios</h2>
+    <section class="new-section container mt-5 text-center">
+        <svg class="section-background" xmlns="http://www.w3.org/2000/svg" width="1347" height="267"
+            viewBox="0 0 1347 267" fill="none">
+            <rect width="1347" height="267" rx="30" fill="#13C670" fill-opacity="0.06" />
+        </svg>
+        <div class="benefits-content">
+
+            <div class="svg-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="84.132" height="84.132" viewBox="0 0 84.132 84.132"
+                    fill="none">
+                    <circle cx="42.066" cy="42.066" r="42.066" fill="#13C670" fill-opacity="0.15" />
+                    <image x="25.1685" y="25.1685" width="32.663" height="32.663" href="check.png" />
+                </svg>
+            </div>
+            <h4>100% Gratis</h4>
+
+            <div class="svg-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="84.132" height="84.132" viewBox="0 0 84.132 84.132"
+                    fill="none">
+                    <circle cx="42.066" cy="42.066" r="42.066" fill="#13C670" fill-opacity="0.15" />
+                    <image x="25.1685" y="25.1685" width="32.663" height="32.663" href="check.png" />
+                </svg>
+            </div>
+            <h4>Precios Actualizados</h4>
+
+            <div class="svg-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="84.132" height="84.132" viewBox="0 0 84.132 84.132"
+                    fill="none">
+                    <circle cx="42.066" cy="42.066" r="42.066" fill="#13C670" fill-opacity="0.15" />
+                    <image x="25.1685" y="25.1685" width="32.663" height="32.663" href="check.png" />
+                </svg>
+            </div>
+            <h4>Compara Precios</h4>
+        </div>
+    </section>
+    
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Modal Para enviar mensaje -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mensaje</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El mensaje se envió exitosamente. Gracias.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h1 class="footer-title">Mule</h1>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fa fa-facebook-official"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                    <small>© 2023 Mule All Rights Reserved</small>
+                </div>
+                <div class="footer-contact">
+                    <h3>¿Quieres saber más?</h3>
+                    <h5>Comunícate con nosotros</h5>
+                    <form class="contact-form">
+                        <div class="input-group">
+                            <i class="fas fa-sms lupa fa-lg"></i>
+                            <input type="text" placeholder="Escribe tu mensaje" class="contact-input">
+                            <button class="contact-button">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

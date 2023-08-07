@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mule - Construction Metasearch</title>
+    <link rel="icon" href="m-solid.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <img src="Logo_Mule.png" alt="Logo de Mule" id="homeLink" class="navbar-logo">
+            <form class="search-form">
+                <div class="input-group">
+                    <div class="search-input-wrapper">
+                        <div class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                <path
+                                    d="M9.35995 0.568359C4.50503 0.568359 0.569336 4.50405 0.569336 9.35896C0.569336 14.2139 4.50503 18.1496 9.35995 18.1496C11.4147 18.1496 13.3049 17.4446 14.8016 16.2632L18.5789 20.0405C18.9828 20.4444 19.6376 20.4444 20.0415 20.0405C20.4454 19.6366 20.4454 18.9818 20.0415 18.5779L16.2642 14.8007C17.4456 13.3039 18.1506 11.4138 18.1506 9.35896C18.1506 4.50405 14.2149 0.568359 9.35995 0.568359Z"
+                                    fill="#09244B" />
+                            </svg>
+                        </div>
+                        <input class="search-input" type="search" placeholder="Busca tus productos...">
+                    </div>                                      
+                    <button class="btn btn-search" type="submit">Buscar</button>
+                </div>
+            </form>
+        </div>
+    </nav>   
+
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="mb-4 text-left border-bottom pb-2" style="color: #060d43; font-weight: bold;">Productos Seleccionados</h2>
+                <div id="productList" class="row">
+                    <!-- Aquí se mostrarán los productos -->
+                </div>
+                
+                <!-- Aquí es donde va el nuevo código -->
+                <div class="mt-4 d-flex justify-content-center">
+                    <span class="badge badge-pill p-3 w-100 text-center" style="background-color: #060d43;">
+                        <h3 class="mb-0 text-white" id="totalPrice">Total: $0</h3>
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Modal Para enviar mensaje -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mensaje</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El mensaje se envió exitosamente. Gracias.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="custom-section">
+        <footer class="text-white text-center p-4 mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-md-left pl-0 pt-3 pt-md-0">
+                        <h1>Mule</h1>
+                        <div>
+                            <a class="text-white" href="https://www.facebook.com" target="_blank">
+                                <i class="fa fa-facebook-official" style="font-size:24px"></i>
+                            </a>
+                            <a class="text-white ml-3" href="https://www.instagram.com" target="_blank">
+                                <i class="fa fa-instagram" style="font-size:24px"></i>
+                            </a>
+                            <a class="text-white ml-3" href="https://www.twitter.com" target="_blank">
+                                <i class="fa fa-twitter" style="font-size:24px"></i>
+                            </a>
+                        </div>
+                        <div class="pt-3">
+                            <small>© 2023 Mule All Rights Reserved</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>¿Queres saber mas?</h3>
+                        <h5>Comunicate con nosotros</h5>
+                        <form class="form-inline justify-content-center">
+                            <div class="input-group">
+                                <div class="input-icon">
+                                    <i class="fas fa-sms lupa"></i>
+                                    <input class="form-control pl-4 mr-sm-2 rounded-pill" type="text"
+                                        placeholder="Escribe tu mensaje">
+                                </div>
+                                <button class="btn btn-light my-2 my-sm-0 rounded-pill" type="button"
+                                    data-toggle="modal" data-target="#myModal">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
