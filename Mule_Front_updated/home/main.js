@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 2000);
         } else {
             // Hacer la solicitud a la API
-            fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${searchQuery}&category=MLA1500`)
+            fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${searchQuery}&category=MLA1500&limit=8`)
                 .then(response => {
                     if (response.ok) {
                         return response.json();

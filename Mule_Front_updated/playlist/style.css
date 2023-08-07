@@ -117,19 +117,20 @@ body {
 
 .search-icon {
     position: absolute;
-    left: 15px; /* adjust this to position the icon left or right */
+    left: 15px;
+    /* adjust this to position the icon left or right */
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
 }
 
 .search-input {
-    width: 543px;
+    width: 543px; /* Mantener el ancho original para pantallas grandes */
     height: 63px;
     border: none;
     border-radius: 31px;
     padding: 20px;
-    padding-left: 50px; /* Adjust this as needed */
+    padding-left: 50px; /* Mantener el relleno original para pantallas grandes */
     box-sizing: border-box;
     background-color: #F2F4F8;
     outline: none;
@@ -139,6 +140,17 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
+}
+
+/* Para dispositivos con un ancho menor o igual a 768px */
+@media (max-width: 768px) {
+    .search-input {
+        width: 100%; /* Ancho completo en dispositivos pequeños */
+        padding: 15px;
+        padding-left: 40px; /* Ajustar el relleno para pantallas más pequeñas */
+        height: 50px; /* Reducir la altura para pantallas más pequeñas */
+        font-size: 16px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+    }
 }
 
 
@@ -175,7 +187,8 @@ input.search-input.error {
 }
 
 
-.btn-search, .btn-list {
+.btn-search,
+.btn-list {
     border-radius: 20px;
     padding: 10px 20px;
     font-weight: 500;
@@ -194,31 +207,6 @@ input.search-input.error {
     align-items: center;
 }
 
-.btn-list {
-    background-color: #28a745;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-.search-form {
-    flex-grow: 1;
-    margin-left: 2rem;
-}
-
-.input-group {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.btn-search, .btn-list {
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
 .btn-search {
     background-color: #007bff;
     color: white;
@@ -230,6 +218,7 @@ input.search-input.error {
     display: flex;
     align-items: center;
 }
+/* navbar */
 
 @keyframes error {
     0% {

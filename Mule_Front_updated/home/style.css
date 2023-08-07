@@ -212,9 +212,8 @@ svg {
 }
 
 
-
 input.search-input.error {
-    border: 2px solid red !important;
+    border-bottom: 2px solid red !important;
 }
 
 
@@ -265,7 +264,6 @@ input.search-input.error {
     display: flex;
     align-items: center;
 }
-
 /* Navbar */
 
 /* Primera section */
