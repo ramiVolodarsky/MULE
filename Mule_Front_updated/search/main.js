@@ -43,6 +43,61 @@ function saveProduct(index) {
     myModal.show();
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Este código se ejecutará después de que el DOM esté completamente cargado
+
+  document.querySelector('.btn-search').addEventListener('click', function(event) {
+
+      event.preventDefault(); // Evita que la página se recargue al enviar el formulario
+      var searchQuery = document.querySelector('#searchInput').value; // Cambiado el ID aquí
+
+      // Comprueba si searchQuery está vacío o sólo contiene espacios en blanco
+      if (searchQuery.trim() === '') {
+          // Si el input está vacío, añade la clase 'error' al input
+          document.querySelector('#searchInput').classList.add('error'); // Cambiado el ID aquí
+
+          // Elimina la clase 'error' después de 2 segundos
+          setTimeout(function() {
+              document.querySelector('#searchInput').classList.remove('error'); // Cambiado el ID aquí
+          }, 2000);
+      } else {
+          // Hacer la solicitud a la API
+          fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${searchQuery}&category=MLA1500&limit=8`)
+              .then(response => {
+                  if (response.ok) {
+                      return response.json();
+                  } else {
+                      throw new Error(`Error en la solicitud: ${response.status}. Respuesta: ${response.statusText}`);
+                  }
+              })
+              .then(data => {
+                  console.log('Datos de la API recibidos:', data);
+                  // Almacenar los datos
+                  localStorage.setItem('searchResults', JSON.stringify(data));
+                  storeData(data);
+
+                  // Redirige a la página de búsqueda
+                  window.location.href = '../search/index.html?q=' + encodeURIComponent(searchQuery);
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+                  console.log('Error detallado:', JSON.stringify(error, null, 2));
+              });
+      }
+  });
+});
+
+function storeData(data) {
+  if (data.results.length > 0) {
+      // Almacenar los datos en localStorage
+      localStorage.setItem('searchResults', JSON.stringify(data.results));
+  } else {
+      console.log('No se encontraron resultados.');
+      localStorage.removeItem('searchResults');  // Elimina los resultados de búsqueda antiguos si no hay nuevos resultados
+  }
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Comprueba si hay resultados de búsqueda almacenados
     if (localStorage.getItem('searchResults')) {
@@ -64,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <img src="${item.thumbnail}" class="product-image" alt="Imagen de ${item.title}">
             <div class="product-details">
                <h5>${item.title}</h5>
-               <p>$${item.seller.nickname}</p>
+               <p>${item.seller.nickname}</p>
             </div>
             <div class="buttons-container">
             <svg class="detailsButton btn-svg" data-product-id=${item.id} xmlns="http://www.w3.org/2000/svg" width="213" height="52" viewBox="0 0 213 52" fill="none">
